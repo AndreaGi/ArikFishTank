@@ -7,7 +7,7 @@ export function home(vai: Vai): HTMLElement {
 
   const scarica = () => {
     const url = URL.createObjectURL(new Blob([esporta()], { type: 'application/json' }));
-    const a = h('a', { href: url, download: `arik-fish-tanks-${new Date().toISOString().slice(0, 10)}.json` });
+    const a = h('a', { href: url, download: `arik-fish-tank-${new Date().toISOString().slice(0, 10)}.json` });
     a.click();
     URL.revokeObjectURL(url);
   };
@@ -29,7 +29,7 @@ export function home(vai: Vai): HTMLElement {
 
   return h('section', { class: 'schermata home' },
     h('div', { class: 'pesci', 'aria-hidden': 'true' }, h('span', { class: 'pesce p1' }, '🐠'), h('span', { class: 'pesce p2' }, '🐟'), h('span', { class: 'pesce p3' }, '🐡')),
-    h('h1', { class: 'titolo' }, 'Arik Fish Tanks'),
+    h('h1', { class: 'titolo' }, 'Arik Fish Tank'),
     h('p', { class: 'sottotitolo' }, "Il diario dell'acquario di Arik"),
     h('div', { class: 'menu' },
       bottone('➕ Nuova analisi', 'enorme', () => vai({ nome: 'nuova' })),

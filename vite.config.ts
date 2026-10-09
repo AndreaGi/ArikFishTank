@@ -8,7 +8,7 @@ export default defineConfig({
       registerType: 'autoUpdate',
       includeAssets: ['icon.svg'],
       manifest: {
-        name: 'Arik Fish Tanks',
+        name: 'Arik Fish Tank',
         short_name: 'Arik Fish',
         description: "Il diario delle analisi dell'acquario di Arik",
         lang: 'it',
